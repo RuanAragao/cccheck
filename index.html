@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>cccheck - credit card check</title>
+<link rel="stylesheet" href="./dist/css/cccheck.css" type="text/css">
+<style type="text/css">
+	#credit-card {
+		display: block;
+		margin-left:100px;
+		width: 320px;
+		padding: 10px;
+		position: relative;
+	}
+	#credit-card label{margin-right:5px;}
+	#credit-card input {
+		padding:5px 7px;
+		border:1px solid #d5d9da;
+		box-shadow: 0 0 5px #e8e9eb inset;
+		width: 100%;
+		font-size:1em;
+		float: left;
+		margin-right: 5px;
+	}
+	#result{margin-left:5px;}
+
+	.row {
+		display: block;
+	}
+	.cln-number,
+	.cln-label,
+	.cln-expiration,
+	.cln-cvv,
+	.cln-name {
+		float: left;
+	}
+
+	.cln-number {
+		width: 80%;
+	}
+	.cln-label {
+		width: 20%;
+		margin-top: 19px;
+	}
+	.cln-expiration {
+		width: 40%;
+	}
+	.cln-cvv {
+		width: 50%;
+	}
+	.cln-cvv input {
+		width: 30px !important;
+	}
+	.cln-cvv i {
+		float: left;
+	}
+	.cln-name {
+		width: 100%;
+	}
+
+	label {
+		display: block;
+	}
+
+</style>
+</head>
+<body>
+	<h1>jQuery plugin cccheck</h1>
+	<form id="credit-card">
+		<div class="row">
+			<div class="cln-number">
+				<label for="cc-number">Card number</label>
+				<input type="text" id="cc-number" required="required">
+			</div>
+			<div class="cln-label">
+				<span id="show-cc-label"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cln-expiration">
+				<label for="cc-expiration">Expiration date</label>
+				<input type="text" id='cc-expiration' required="required">
+			</div>
+			<div class="cln-cvv">
+				<label for="cc-cvv">CVV</label>
+				<input type="text" id="cc-cvv" required="required">
+				<i class="i-icon-payment i-icon-cvv2"></i>
+			</div>
+			<div class="row">
+				<div class="cln-name">
+					<label for="cc-name">Name</label>
+					<input type="text" id="cc-name" required="required">
+				</div>
+			</div>
+		</div>
+
+
+	</form>
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+ <script src="./dist/js/jquery.cccheck.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+	  $.cccheck();
+  })
+  </script>
+
+</body>
+</html>

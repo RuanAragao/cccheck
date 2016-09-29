@@ -1,0 +1,42 @@
+{
+  "name": "cccheck",
+  "title": "cccheck",
+  "description": "Simple front-end credit card.",
+  "keywords": [
+    "jquery",
+    "credit",
+    "card",
+    "check",
+    "validate",
+    "itentifier",
+    "measure",
+    "meter"
+
+  ],
+  "version": "1.0.6",
+  "author": {
+    "name": "Ruan Aragão",
+    "email": "ruanaragao2@gmail.com",
+    "url": "https://github.com/RuanAragao"
+  },
+  "maintainers": [
+    {
+      "name": "Ruan Aragão",
+      "email": "ruanaragao2@gmail.com",
+      "url": "https://github.com/RuanAragao"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/RuanAragao/cccheck/master/LICENSE"
+    }
+  ],
+  "bugs": "https://github.com/RuanAragao/cccheck/issues/",
+  "homepage": "http://ruanaragao.com/lab/jquery/cccheck/",
+  "docs": "https://github.com/RuanAragao/cccheck#readme",
+  "download": "https://github.com/RuanAragao/cccheck/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}

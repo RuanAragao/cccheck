@@ -1,0 +1,36 @@
+{
+  "name": "cccheck",
+  "version": "1.0.0",
+  "description": "Simple front-end credit card",
+  "main": "jquery.cccheck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuanAragao/cccheck.git"
+  },
+  "keywords": [
+    "jquery",
+    "credit",
+    "card",
+    "check",
+    "validate",
+    "identifier",
+    "measure",
+    "meter"
+  ],
+  "author": "Ruan Aragão",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RuanAragao/cccheck/issues"
+  },
+  "homepage": "https://github.com/RuanAragao/cccheck#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0"
+  }
+}
