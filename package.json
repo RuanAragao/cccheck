@@ -11,6 +11,7 @@
     "url": "git+https://github.com/RuanAragao/cccheck.git"
   },
   "keywords": [
+	"jquery-plugin",
     "jquery",
     "credit",
     "card",
