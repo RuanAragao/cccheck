@@ -7,6 +7,17 @@ add link script `cccheck/dist/js/jquery.cccheck.js`
 
 You need to have jquery in your project, of course.
 
+## to configure:
+```javascript
+$(document).ready(function() {
+  $.cccheck({
+    // Config local
+    'input_cc_number'     :   '#cc-number',
+    'element_show_label'  :   '#show-cc-label'
+  });
+})
+```
+
 ## to contribute:
 1. fork this repository
 2. `git clone git@github.com:[you]/cccheck.git`
