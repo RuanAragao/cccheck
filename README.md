@@ -1,5 +1,10 @@
 jQuery plugin cccheck (Credit Card Check)
 ========================================
+[![npm version](https://badge.fury.io/js/cccheck.svg)](https://badge.fury.io/js/cccheck)
+[![GitHub issues](https://img.shields.io/github/issues/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/issues)
+[![GitHub forks](https://img.shields.io/github/forks/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/network)
+[![GitHub stars](https://img.shields.io/github/stars/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/stargazers)
+[![GitHub license](https://img.shields.io/github/license/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/blob/master/LICENSE)
 
 ## to usage:
 add link css `cccheck/dist/css/cccheck.css`
