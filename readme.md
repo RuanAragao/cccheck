@@ -1,4 +1,4 @@
-# CCCheck - Credit Card Check
+# CCCheck - Credit Card Check :credit_card: :heavy_check_mark:
 
 [![npm version](https://badge.fury.io/js/cccheck.svg)](https://badge.fury.io/js/cccheck)
 [![GitHub issues](https://img.shields.io/github/issues/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/issues)
