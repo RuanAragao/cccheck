@@ -4,6 +4,7 @@ jQuery plugin cccheck (Credit Card Check)
 [![GitHub issues](https://img.shields.io/github/issues/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/issues)
 [![GitHub forks](https://img.shields.io/github/forks/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/network)
 [![GitHub stars](https://img.shields.io/github/stars/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/stargazers)
+[![GitHub contributors](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/repos/RuanAragao/cccheck/contributors&query=length&label=contributors)](https://github.com/RuanAragao/cccheck/graphs/contributors)
 [![GitHub license](https://img.shields.io/github/license/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/blob/master/LICENSE)
 
 ## to usage:
