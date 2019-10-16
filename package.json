@@ -1,6 +1,6 @@
 {
   "name": "cccheck",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple front-end credit card",
   "main": "jquery.cccheck.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/RuanAragao/cccheck.git"
   },
   "keywords": [
-	"jquery-plugin",
+    "jquery-plugin",
     "jquery",
     "credit",
     "card",
