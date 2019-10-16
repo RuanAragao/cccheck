@@ -1,5 +1,6 @@
 # CCCheck - Credit Card Check :credit_card: :heavy_check_mark:
 
+[![GitHub version](https://badge.fury.io/gh/RuanAragao%2Fcccheck.svg)](https://badge.fury.io/gh/RuanAragao%2Fcccheck)
 [![npm version](https://badge.fury.io/js/cccheck.svg)](https://badge.fury.io/js/cccheck)
 [![GitHub issues](https://img.shields.io/github/issues/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/issues)
 [![GitHub forks](https://img.shields.io/github/forks/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/network)
@@ -27,5 +28,16 @@ $(document).ready(function() {
 1. Fork this repository.
 2. `git clone github.com/[you]/cccheck.git`
 3. `cd cccheck`
-4. `npm install`
-5. `gulp` or `gulp watch`
+4. `yarn`
+5. `yarn watch` (for development) or `yarn build` (for production)
+
+### Files for plugin 
+- The *scripts* into *./js*
+- The *styles* SCSS into *./scss*
+- *No* edit *./dist*
+
+### Files non-plugin
+For styles and scripts exclusive of the example page, add directory in *index.html*.
+
+## Question / Bug / Idea
+[Open an issue](https://github.com/RuanAragao/cccheck/issues)
