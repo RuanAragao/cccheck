@@ -1,17 +1,19 @@
 {
   "name": "cccheck",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple front-end credit card",
-  "main": "jquery.cccheck.js",
+  "main": "./dist/js/jquery.cccheck.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RuanAragao/cccheck.git"
   },
   "keywords": [
-	"jquery-plugin",
+    "jquery-plugin",
     "jquery",
     "credit",
     "card",
@@ -28,10 +30,16 @@
   },
   "homepage": "https://github.com/RuanAragao/cccheck#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^2.0.0"
+    "babel-core": "^6.26.3",
+    "@babel/core": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   }
 }

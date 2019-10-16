@@ -6,7 +6,7 @@
  * by Ruan Aragão
  */
 
- function getCCLabel(cc_number_mask) {
+ function getCCLabel(ccNumberMask) {
 
     var regexVisa = /^4[0-9]{5}(?:[0-9]{3})?/; // 12
     var regexMaster = /^5[1-5][0-9]{4}/; // 14
@@ -17,31 +17,45 @@
     var regexHiper = /^(?:38|60)\d{4}/;
     var regexElo = /^(?:636368|636369|438935|504175|451416|636297|5067|4576|4011|506699)\d{4}/;
 
-    cc_number = cc_number_mask.replace(/-/gi, '');
+    var ccNumber = ccNumberMask.replace(/-/gi, '');
 
-    if(regexVisa.test(cc_number)) {
-        return 'visa';
-    }
-    if(regexMaster.test(cc_number)) {
-        return 'master';
-    }
-    if(regexAmex.test(cc_number)) {
-        return 'amex';
-    }
-    if(regexDiners.test(cc_number)) {
-        return 'diners';
-    }
-    if(regexDiscover.test(cc_number)) {
-        return 'discover';
-    }
-    if(regexJCB.test(cc_number)) {
-        return 'jcb';
-    }
-    if(regexHiper.test(cc_number)) {
-        return 'hipercard';
-    }
-    if(regexElo.test(cc_number)) {
-        return 'elo';
+    var regexes = [
+        {
+            regex: regexVisa,
+            label: 'visa'
+        },
+        {
+            regex: regexMaster,
+            label: 'master'
+        },
+        {
+            regex: regexAmex,
+            label: 'amex'
+        },
+        {
+            regex: regexDiners,
+            label: 'diners'
+        },
+        {
+            regex: regexDiscover,
+            label: 'discover'
+        },
+        {
+            regex: regexJCB,
+            label: 'jcb'
+        },
+        {
+            regex: regexHiper,
+            label: 'hipercard'
+        },
+        {
+            regex: regexElo,
+            label: 'elo'
+        }
+    ];
+   
+    for(var i = 0 ; i < regexes.length ; i++) {
+        if (regexes[i].regex.test(ccNumber)) return regexes[i].label;
     }
 
     return false;
@@ -52,19 +66,19 @@
     $.cccheck = function(settings){
         var config = {
             // Config local
-            'input_cc_number'     :   '#cc-number',
-            'element_show_label'  :   '#show-cc-label'
+            'inputCCNumber'     :   '#cc-number',
+            'elementShowLabel'  :   '#show-cc-label'
         };
         if (settings){settings = jQuery.extend(config, settings);}
 
         // variables
-        var nodeNumber  = $(config.input_cc_number);
-        var nodeLabel   = $(config.element_show_label);
+        var nodeNumber  = $(config.inputCCNumber);
+        var nodeLabel   = $(config.elementShowLabel);
 
         nodeNumber.keyup(function(e) {
-            card_label = getCCLabel(nodeNumber.val());
-            nodeLabel.html('<i class="i-icon-payment i-icon-card-' + card_label + '"></i>');
-            //console.log(card_label);
+            var cardLabel = getCCLabel(nodeNumber.val());
+            nodeLabel.html('<i class="i-icon-payment i-icon-card-' + cardLabel + '"></i>');
+            console.log(cardLabel)
         });
 
         return this;
