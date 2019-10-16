@@ -4,14 +4,29 @@
 <meta charset=utf-8 />
 <title>cccheck - credit card check</title>
 <link rel="stylesheet" href="./dist/css/cccheck.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css">
 <style type="text/css">
 	body {
 		font-family: Arial, Helvetica, sans-serif;
+		background: #5380E7;
+		
 	}
 	.main-header {
 		width: 360px;
 		text-align: center;
 		padding: 0px 30px;
+	}
+	#main {
+		display: flex;
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	.header-content{
+		padding-left: 50px;
 	}
 	#credit-card {
 		display: block;
@@ -20,10 +35,18 @@
 		position: relative;
 		border: 1px solid #d5d9da;
 		padding: 20px;
-		background: #e8e8e8;
+		background: #648EF1;
 	}
 	h1 {
-		font-weight: 500;
+
+		text-align: left;
+		font-weight: 600;
+		font-size: 2rem;
+		line-height: 0;
+	}
+	p {
+		text-align: left;
+		line-height: 0;
 	}
 	#credit-card label{margin-right:5px;}
 	#credit-card input {
@@ -80,7 +103,10 @@
 <body>
 	<section id="main">
 		<div class="main-header">
-			<h1>jQuery Plugin cccheck</h1>
+			<div class="header-content">
+				<h1><i class="far fa-credit-card"></i> CCCheck</h1>
+				<p>A JQuery plugin credit card checker.</p>
+			</div>
 		</div>
 		<form id="credit-card">
 			<div class="row">
@@ -100,33 +126,6 @@
 			<div class="last-row">
 				<div>
 					<input type="text" id="cc-name" required="required" placeholder="NAME">
-				</div>
-			</div>
-		</form>
-	</section>
-	<section id="mockup">
-		<div class="main-header">
-			<h1>jQuery Plugin cccheck</h1>
-		</div>
-		<form id="credit-card">
-			<div class="row">
-				<div>
-					<input type="text" id="cc-number" required="required" placeholder="5372 0749 7516">
-					<i class="i-icon-payment i-icon-card-num"></i>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-1">
-					<input type="text" id='cc-expiration' required="required" placeholder="04/2-22">
-				</div>
-				<div class="col-2">
-					<input type="text" id="cc-cvv" required="required" placeholder="600">
-					<i class="i-icon-payment i-icon-cvv2"></i>
-				</div>
-			</div>
-			<div class="last-row">
-				<div>
-					<input type="text" id="cc-name" required="required" placeholder="TRSTAM GOWLAND">
 				</div>
 			</div>
 		</form>
