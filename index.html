@@ -20,6 +20,10 @@
 		position: relative;
 		border: 1px solid #d5d9da;
 		padding: 20px;
+		background: #e8e8e8;
+	}
+	h1 {
+		font-weight: 500;
 	}
 	#credit-card label{margin-right:5px;}
 	#credit-card input {
@@ -30,11 +34,18 @@
 		font-size:1em;
 		margin-right: 5px;
 	}
+	#cc-number {
+		width: 330px !important;
+	}
 	#cc-name {
 		width: 330px !important;
 	}
 	#result{margin-left:5px;}
 	.row {
+		display: flex;
+		margin-bottom: 15px;
+	}
+	.last-row {
 		display: flex;
 	}
 	.col-1 {
@@ -54,6 +65,14 @@
 		right: 30px;
     	margin-top: -33px;
 	}
+	.i-icon-card-num{
+		width: 49px;
+    	height: 30px;
+		background-position: 6px -69px;
+		position: absolute;
+		right: 32px;
+		top: 23px;
+	}
 	
 
 </style>
@@ -61,33 +80,53 @@
 <body>
 	<section id="main">
 		<div class="main-header">
-			<h1>jQuery plugin cccheck</h1>
+			<h1>jQuery Plugin cccheck</h1>
 		</div>
 		<form id="credit-card">
 			<div class="row">
 				<div>
-					<label for="cc-number">Card number</label>
-					<input type="text" id="cc-number" required="required">
-				</div>
-				<div>
-					<span id="show-cc-label"></span>
+					<input type="text" id="cc-number" required="required" placeholder="CARD NUMBER">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-1">
-					<label for="cc-expiration">Expiration date</label>
-					<input type="text" id='cc-expiration' required="required">
+					<input type="text" id='cc-expiration' required="required" placeholder="VALID THRU">
 				</div>
 				<div class="col-2">
-					<label for="cc-cvv">CVV</label>
-					<input type="text" id="cc-cvv" required="required">
+					<input type="text" id="cc-cvv" required="required" placeholder="CVV">
 					<i class="i-icon-payment i-icon-cvv2"></i>
 				</div>
 			</div>
+			<div class="last-row">
+				<div>
+					<input type="text" id="cc-name" required="required" placeholder="NAME">
+				</div>
+			</div>
+		</form>
+	</section>
+	<section id="mockup">
+		<div class="main-header">
+			<h1>jQuery Plugin cccheck</h1>
+		</div>
+		<form id="credit-card">
 			<div class="row">
 				<div>
-					<label for="cc-name">Name</label>
-					<input type="text" id="cc-name" required="required">
+					<input type="text" id="cc-number" required="required" placeholder="5372 0749 7516">
+					<i class="i-icon-payment i-icon-card-num"></i>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-1">
+					<input type="text" id='cc-expiration' required="required" placeholder="04/2-22">
+				</div>
+				<div class="col-2">
+					<input type="text" id="cc-cvv" required="required" placeholder="600">
+					<i class="i-icon-payment i-icon-cvv2"></i>
+				</div>
+			</div>
+			<div class="last-row">
+				<div>
+					<input type="text" id="cc-name" required="required" placeholder="TRSTAM GOWLAND">
 				</div>
 			</div>
 		</form>
