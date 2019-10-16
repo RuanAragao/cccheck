@@ -1,6 +1,6 @@
 {
   "name": "cccheck",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple front-end credit card",
   "main": "jquery.cccheck.js",
   "scripts": {

@@ -13,7 +13,7 @@
     "meter"
 
   ],
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": {
     "name": "Ruan Aragão",
     "email": "ruanaragao2@gmail.com",
@@ -24,6 +24,11 @@
       "name": "Ruan Aragão",
       "email": "ruanaragao2@gmail.com",
       "url": "https://github.com/RuanAragao"
+    },
+    {
+      "name": "wincentrtz",
+      "email": "",
+      "url": "https://github.com/wincentrtz"
     }
   ],
   "licenses": [
