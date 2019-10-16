@@ -76,9 +76,9 @@
         var nodeLabel   = $(config.elementShowLabel);
 
         nodeNumber.keyup(function(e) {
-            cardLabel = getCCLabel(nodeNumber.val());
+            var cardLabel = getCCLabel(nodeNumber.val());
             nodeLabel.html('<i class="i-icon-payment i-icon-card-' + cardLabel + '"></i>');
-            // console.log(cardLabel)
+            console.log(cardLabel)
         });
 
         return this;
