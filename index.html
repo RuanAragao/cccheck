@@ -1,40 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset=utf-8 />
-<title>cccheck - credit card check</title>
-<link rel="stylesheet" href="./dist/css/cccheck.css" type="text/css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>cccheck - credit card check</title>
+	<link rel="stylesheet" href="./dist/css/cccheck.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css">
 <style type="text/css">
 	body {
+		display:flex;
+		justify-content: center;
+		align-items: center;
 		font-family: Arial, Helvetica, sans-serif;
 		background: #5380E7;
-		
-	}
-	.main-header {
-		width: 360px;
-		text-align: center;
-		padding: 0px 30px;
+		min-height: 100vh;
+		margin: 0;
+		padding: 0;
 	}
 	#main {
+		width: 100%;
 		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 		color: white;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
+		padding: 0 20px;
+	}
+	.main-header {
+		/* width: 360px; */
+		text-align: center;
+		/* padding: 0px 30px; */
+		margin: 0;
 	}
 	.header-content{
 		padding-left: 50px;
 	}
 	#credit-card {
 		display: block;
-		width: 360px;
+		/* width: 360px; */
 		padding: 10px;
 		position: relative;
 		border: 1px solid #d5d9da;
 		padding: 20px;
+		margin: 20px 0;
 		background: #648EF1;
 	}
 	h1 {
@@ -55,13 +64,13 @@
 		box-shadow: 0 0 5px #e8e9eb inset;
 		width: 100%;
 		font-size:1em;
-		margin-right: 5px;
+		/* margin-right: 5px; */
 	}
 	#cc-number {
-		width: 330px !important;
+		/* width: 330px !important; */
 	}
 	#cc-name {
-		width: 330px !important;
+		/* width: 330px !important; */
 	}
 	#result{margin-left:5px;}
 	.row {
@@ -75,7 +84,7 @@
 		width: 47%;
 	}
 	.col-2 {
-		width: 45%;
+		width: 47%;
 	}
 	.full-width {
 		width: 100%;
@@ -96,12 +105,68 @@
 		right: 32px;
 		top: 23px;
 	}
-
-	#show-cc-label {
+	#show-cc-label{
 		position: absolute;
 		right: 30px;
-    margin-top: 2px;
-	}	
+		margin-top: 2px;
+	}
+
+/* Media Query Breackpoints for different devices */
+	
+	/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.main-header{
+		flex-basis: 100%;
+	}
+	#credit-card{
+		flex-basis: 100%;
+		/* width: 100%; */
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.main-header{
+		flex-basis: 100%;
+	}
+	#credit-card{
+		flex-basis: 100%;
+		/* width: 100%; */
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.main-header{
+		flex-basis: 45%;
+	}
+	#credit-card{
+		flex-basis: 48%;
+		/* width: 100%; */
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.main-header{
+		flex-basis: 30%;
+	}
+	#credit-card{
+		flex-basis: 30%;
+		/* width: 100%; */
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.main-header{
+		flex-basis: 30%;
+	}
+	#credit-card{
+		flex-basis: 30%;
+		/* width: 100%; */
+	}
+}
 
 </style>
 </head>
@@ -115,10 +180,10 @@
 		</div>
 		<form id="credit-card">
 			<div class="row">
-				<div>
+				
 					<input type="text" id="cc-number" required="required" placeholder="CARD NUMBER">
 					<span id="show-cc-label"></span>
-				</div>
+
 			</div>
 			<div class="row">
 				<div class="col-1">
@@ -130,9 +195,7 @@
 				</div>
 			</div>
 			<div class="last-row">
-				<div>
 					<input type="text" id="cc-name" required="required" placeholder="NAME">
-				</div>
 			</div>
 		</form>
 	</section>
