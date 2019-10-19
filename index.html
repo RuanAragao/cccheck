@@ -1,150 +1,216 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset=utf-8 />
-<title>cccheck - credit card check</title>
-<link rel="stylesheet" href="./dist/css/cccheck.css" type="text/css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css">
-<style type="text/css">
-	body {
-		font-family: Arial, Helvetica, sans-serif;
-		background: #5380E7;
-		
-	}
-	.main-header {
-		width: 360px;
-		text-align: center;
-		padding: 0px 30px;
-	}
-	#main {
-		display: flex;
-		color: white;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-	}
-	.header-content{
-		padding-left: 50px;
-	}
-	#credit-card {
-		display: block;
-		width: 360px;
-		padding: 10px;
-		position: relative;
-		border: 1px solid #d5d9da;
-		padding: 20px;
-		background: #648EF1;
-	}
-	h1 {
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>cccheck - credit card check</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/jgthms/minireset.css/master/minireset.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./dist/css/cccheck.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      type="text/css"
+    />
+    <style type="text/css">
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #5380e7;
+      }
+      .main-header {
+        text-align: center;
+      }
 
-		text-align: left;
-		font-weight: 600;
-		font-size: 2rem;
-		line-height: 0;
-	}
-	p {
-		text-align: left;
-		line-height: 0;
-	}
-	#credit-card label{margin-right:5px;}
-	#credit-card input {
-		padding:8px 11px;
-		border:1px solid #d5d9da;
-		box-shadow: 0 0 5px #e8e9eb inset;
-		width: 100%;
-		font-size:1em;
-		margin-right: 5px;
-	}
-	#cc-number {
-		width: 330px !important;
-	}
-	#cc-name {
-		width: 330px !important;
-	}
-	#result{margin-left:5px;}
-	.row {
-		display: flex;
-		margin-bottom: 15px;
-	}
-	.last-row {
-		display: flex;
-	}
-	.col-1 {
-		width: 47%;
-	}
-	.col-2 {
-		width: 45%;
-	}
-	.full-width {
-		width: 100%;
-	}
-	#cc-expiration {
-		width: 80% !important;
-	}
-	.i-icon-cvv2 {
-		position: absolute;
-		right: 30px;
-    	margin-top: -33px;
-	}
-	.i-icon-card-num{
-		width: 49px;
-    	height: 30px;
-		background-position: 6px -69px;
-		position: absolute;
-		right: 32px;
-		top: 23px;
-	}
+      .container {
+        width: 100vw;
+        height: 100vh;
+      }
 
-	#show-cc-label {
-		position: absolute;
-		right: 30px;
-    margin-top: 2px;
-	}	
+      .row {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-</style>
-</head>
-<body>
-	<section id="main">
-		<div class="main-header">
-			<div class="header-content">
-				<h1><i class="far fa-credit-card"></i> CCCheck</h1>
-				<p>A JQuery plugin credit card checker.</p>
-			</div>
-		</div>
-		<form id="credit-card">
-			<div class="row">
-				<div>
-					<input type="text" id="cc-number" required="required" placeholder="CARD NUMBER">
-					<span id="show-cc-label"></span>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-1">
-					<input type="text" id='cc-expiration' required="required" placeholder="VALID THRU">
-				</div>
-				<div class="col-2">
-					<input type="text" id="cc-cvv" required="required" placeholder="CVV">
-					<i class="i-icon-payment i-icon-cvv2"></i>
-				</div>
-			</div>
-			<div class="last-row">
-				<div>
-					<input type="text" id="cc-name" required="required" placeholder="NAME">
-				</div>
-			</div>
-		</form>
-	</section>
- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
- <script src="./dist/js/jquery.cccheck.js"></script>
+      .column {
+        padding: 10px;
+      }
 
-  <script type="text/javascript">
-  $(document).ready(function(){
-	  $.cccheck();
-  })
-  </script>
+      .column.column--credit-card {
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        padding: 19px 26px;
+      }
 
-</body>
+      .input-row:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      .input-row.input-row--double {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      h1 {
+        color: #fff;
+        text-align: left;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 0;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        color: #fff;
+        text-align: left;
+        line-height: 1.5px;
+        margin-bottom: 1rem;
+      }
+
+      .col-1 {
+        width: 65%;
+        margin-right: 5px;
+      }
+
+      .col-2 {
+        width: 30%;
+        position: relative;
+      }
+
+      #credit-card label {
+        margin-right: 5px;
+      }
+
+      #credit-card input {
+        padding: 8px 11px;
+        border: 1px solid #c4c4c4;
+        box-shadow: none;
+        width: 100%;
+        font-size: 1em;
+        border-radius: 3px;
+      }
+
+      .i-icon-cvv2 {
+        position: absolute;
+        right: 5px;
+        top: 3px;
+      }
+
+      .i-icon-card-num {
+        width: 49px;
+        height: 30px;
+        background-position: 6px -69px;
+        position: absolute;
+        right: 32px;
+        top: 23px;
+      }
+
+      #show-cc-label {
+        position: absolute;
+        right: 30px;
+        margin-top: 2px;
+      }
+
+      @media screen and (min-width: 555px) {
+        .column.column--credit-card {
+          border: 1px solid #c4c4c4;
+        }
+      }
+
+      @media screen and (min-width: 810px) {
+        .container {
+          margin: 0 auto;
+          padding: 0 21px;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .row {
+          flex-direction: row;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .col-1 {
+          width: 60%;
+        }
+
+        .col-2 {
+          width: 40%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="row">
+        <div class="column">
+          <div class="main-header">
+            <div class="header-content">
+              <h1><i class="far fa-credit-card"></i> CCCheck</h1>
+              <p>A JQuery plugin credit card checker.</p>
+            </div>
+          </div>
+        </div>
+        <div class="column column--credit-card">
+          <form id="credit-card">
+            <div class="input-row">
+              <div>
+                <input
+                  type="text"
+                  id="cc-number"
+                  required="required"
+                  placeholder="CARD NUMBER"
+                />
+                <span id="show-cc-label"></span>
+              </div>
+            </div>
+            <div class="input-row input-row--double">
+              <div class="col-1">
+                <input
+                  type="text"
+                  id="cc-expiration"
+                  required="required"
+                  placeholder="VALID THRU"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="text"
+                  id="cc-cvv"
+                  required="required"
+                  placeholder="CVV"
+                />
+                <i class="i-icon-payment i-icon-cvv2"></i>
+              </div>
+            </div>
+            <div class="input-row">
+              <div>
+                <input
+                  type="text"
+                  id="cc-name"
+                  required="required"
+                  placeholder="NAME"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./dist/js/jquery.cccheck.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $.cccheck();
+      });
+    </script>
+  </body>
 </html>
-
