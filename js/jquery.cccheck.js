@@ -1,5 +1,5 @@
 /*!
- * jquery.cccheck v1.0.0
+ * jquery.cccheck v1.0.10
  * measure password strength
  * https://github.com/RuanAragao/cccheck
  * MIT License
