@@ -8,6 +8,8 @@
 [![GitHub contributors](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/repos/RuanAragao/cccheck/contributors&query=length&label=contributors)](https://github.com/RuanAragao/cccheck/graphs/contributors)
 [![GitHub license](https://img.shields.io/github/license/RuanAragao/cccheck)](https://github.com/RuanAragao/cccheck/blob/master/LICENSE)
 
+![image](https://user-images.githubusercontent.com/1015013/136751876-6b6b27ea-ddb6-4ced-aae9-fd3089e050f9.png)
+
 ## To Use:
 - Add CSS link: `cccheck/dist/css/cccheck.css`.  
 - Add JavaScript link: `cccheck/dist/js/jquery.cccheck.js`.
