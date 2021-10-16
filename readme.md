@@ -43,3 +43,10 @@ For styles and scripts exclusive of the example page, add directory in *index.ht
 
 ## Question / Bug / Idea
 [Open an issue](https://github.com/RuanAragao/cccheck/issues)
+
+## Contributors
+<a href="https://github.com/RuanAragao/cccheck/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=RuanAragao/cccheck" />
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
